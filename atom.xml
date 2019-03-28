@@ -4,7 +4,7 @@
  <title>Javier Peralta</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2019-03-27T19:16:20-06:00</updated>
+ <updated>2019-03-28T17:52:10-06:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Javier Peralta</name>
@@ -36,9 +36,9 @@
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;!-- In this paper the use of four new operations that are aimed to introduce rotational equivariance in **convolutional neural networks** (*CNNs*) is discussed. --&gt;
-
 &lt;p&gt;The authors of this paper propose four new neural networks, that can be used together to build &lt;strong&gt;CNNs&lt;/strong&gt; (Convolutional Neural Networks) that are partially or fully rotation equivariant.&lt;/p&gt;
+
+&lt;!--more--&gt;
 
 &lt;h3 id=&quot;equivariance-and-invariance&quot;&gt;Equivariance and Invariance&lt;/h3&gt;
 
@@ -50,6 +50,38 @@
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;f(tx) = f(x) \,\,\,\, \forall t \in T&lt;/script&gt;
 
+&lt;h3 id=&quot;why-encode-invariance&quot;&gt;Why encode invariance?&lt;/h3&gt;
+
+&lt;p&gt;The simplest and most common way to achieve an approximate invariance to a class of transformations of the input is through &lt;em&gt;data augmentation&lt;/em&gt; during training. But there is no guarantee that this will generalize, to obtain such a thing encoding the desired invariance properties into the network might be helpful.&lt;/p&gt;
+
+&lt;h3 id=&quot;proposed-layers&quot;&gt;Proposed Layers&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/images/cyclic_ops.png&quot; alt=&quot;Cyclic Operators&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;cyclic-slicing&quot;&gt;Cyclic Slicing&lt;/h4&gt;
+
+&lt;p&gt;This layer stacks rotated copies of the input into a single mini-batch, resulting in a $4 \times$ bigger batch.&lt;/p&gt;
+
+&lt;h4 id=&quot;cyclic-pooling&quot;&gt;Cyclic Pooling&lt;/h4&gt;
+
+&lt;p&gt;Combines the predictions from differently rotated copies using a permutation invariant pooling function, reducing the batch size $4 \times$.&lt;/p&gt;
+
+&lt;h4 id=&quot;cyclic-rolling&quot;&gt;Cyclic Rolling&lt;/h4&gt;
+
+&lt;p&gt;Cyclically permutes the input and stacks them along the feature dimension. This increases the number of feature maps which in turn allows us to reduce the number of filters in the convolutional layers. This is similar to $4-$way parameter sharing.&lt;/p&gt;
+
+&lt;h4 id=&quot;cyclic-stacking&quot;&gt;Cyclic Stacking&lt;/h4&gt;
+
+&lt;p&gt;Full rotational equivariance isn’t always required and for that use case s simple stack or concatenation of feature maps instead of pooling will suffice.&lt;/p&gt;
+
+&lt;h3 id=&quot;rotating-feature-maps-or-filters&quot;&gt;Rotating Feature Maps or Filters?&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/feature_maps.png&quot; alt=&quot;Feature vs Filter&quot; width=&quot;400&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Rotating feature maps is easier to implement because the roll operator can be isolated in a separate layer. On the other hand, this implies the roll operation has to make four copies of the feature map, increasing memory requirements. Rotating filters requires re-implementing convolutional layers, making implementation more complex, but since only filters are copied memory requirements are lower. The authors of the paper use the former option.&lt;/p&gt;
+
+&lt;h3 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h3&gt;
+
+&lt;p&gt;The authors of the paper propose four new layers to be used in CNNs. &lt;em&gt;Slicing&lt;/em&gt; and &lt;em&gt;Pooling&lt;/em&gt; can easily be used in existing network architectures to add a degree of equivariance. The results showed in the paper show that networks with these layers perform better than networks with out them and through the use of &lt;em&gt;Rolling&lt;/em&gt; they managed to reduced the number of training parameters by half or even by four. &lt;!-- I believe further research is required to confirm that  --&gt;&lt;/p&gt;
 </content>
  </entry>
  

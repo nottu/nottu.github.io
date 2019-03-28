@@ -5,3 +5,6 @@ table.authors {
     background-color: inherit; }
   table.authors tbody tr td.email {
     text-align: right; }
+
+p img {
+  margin: auto; }
