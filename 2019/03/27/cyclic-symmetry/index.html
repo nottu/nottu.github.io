@@ -29,17 +29,24 @@
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
 
-  <!-- Latex Suppert -->
-  <script type="text/x-mathjax-config">
+  <!-- Latex Support -->
+  
+       <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
+      TeX: {
+        equationNumbers: {
+          autoNumber: "AMS"
+        }
+      },
       tex2jax: {
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-        inlineMath: [['$','$']]
+        inlineMath: [ ['$','$'],
+        displayMath: [ ['$$','$$'] ],
+        processEscapes: true,
       }
     });
   </script>
-
-  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+  
 
 </head>
 
@@ -86,7 +93,7 @@
       
         
       
-      <a class="sidebar-nav-item" href="/papers/">Read Papers</a>
+      <a class="sidebar-nav-item" href="/papers/">Papers Read</a>
 
       <a class="sidebar-nav-item" href="https://github.com/nottu/nottu.github.io">GitHub project</a>
     </nav>
@@ -124,7 +131,7 @@
 
 <h3 id="equivariance-and-invariance">Equivariance and Invariance</h3>
 
-<p>A function $f(x)$ is called equivariant to a class of transformations T, if</p>
+<p>A function $f(x)$ is called equivariant to a class of transformations $T$, if</p>
 
 <script type="math/tex; mode=display">f(tx) = t^\prime f(x) \,\,\,\, \forall t \in T</script>
 
