@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Javier Peralta</title>
+ <link href="http://localhost:4000/atom.xml" rel="self"/>
+ <link href="http://localhost:4000/"/>
+ <updated>2019-03-27T18:11:34-06:00</updated>
+ <id>http://localhost:4000</id>
+ <author>
+   <name>Javier Peralta</name>
+   <email></email>
+ </author>
+
+ 
+ <entry>
+   <title>Exploiting Cyclyc Symmetry in Convolutional Neural Networks</title>
+   <link href="http://localhost:4000/2019/03/27/cyclic-symmetry/"/>
+   <updated>2019-03-27T00:00:00-06:00</updated>
+   <id>http://localhost:4000/2019/03/27/cyclic-symmetry</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;https://arxiv.org/abs/1602.02660&quot;&gt;Source&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Shape Analysis?</title>
+   <link href="http://localhost:4000/2019/03/27/shape-analysis-intro/"/>
+   <updated>2019-03-27T00:00:00-06:00</updated>
+   <id>http://localhost:4000/2019/03/27/shape-analysis-intro</id>
+   <content type="html">&lt;h2 id=&quot;what-is-a-shape&quot;&gt;What is a shape?&lt;/h2&gt;
+
+</content>
+ </entry>
+ 
+
+</feed>
