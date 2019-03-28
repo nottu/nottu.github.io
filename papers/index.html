@@ -144,6 +144,14 @@
 
 <p>The authors of this paper propose four new neural networks, that can be used together to build <strong>CNNs</strong> (Convolutional Neural Networks) that are partially or fully rotation equivariant.</p>
 
+<h3 id="cyclic-symmetry">Cyclic Symmetry</h3>
+
+<p>CNN will often learn multiple copies of the same filter at different orientations. Encoding rotational symmetry into the architecture of the network can reduce the redundancy of learning patterns at different orientations, and can reduce the number of parameters, diminishing the risk of over-fitting.</p>
+
+<p>There are only four possible rotations of the input that would not require interpolation over angles $ k \cdot 90^\text{o}, k \in [0, 1, 2, 3]$. This restricted form of restricted symmetry is what is called <strong>cyclic symmetry</strong> by the authors of the paper. Applying a horizontal flip, we can get eight possible orientations: <strong>dihedral symmetry</strong></p>
+
+<p><em>Cyclic symmetry</em> can be encoded in CNNs by parameter sharing.</p>
+
 <h3 id="equivariance-and-invariance">Equivariance and Invariance</h3>
 
 <p>A function $f(x)$ is called equivariant to a class of transformations $T$, if</p>

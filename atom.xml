@@ -4,7 +4,7 @@
  <title>Javier Peralta</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2019-03-28T00:24:36-06:00</updated>
+ <updated>2019-03-28T01:08:10-06:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Javier Peralta</name>
@@ -39,6 +39,14 @@
 &lt;!-- In this paper the use of four new operations that are aimed to introduce rotational equivariance in **convolutional neural networks** (*CNNs*) is discussed. --&gt;
 
 &lt;p&gt;The authors of this paper propose four new neural networks, that can be used together to build &lt;strong&gt;CNNs&lt;/strong&gt; (Convolutional Neural Networks) that are partially or fully rotation equivariant.&lt;/p&gt;
+
+&lt;h3 id=&quot;cyclic-symmetry&quot;&gt;Cyclic Symmetry&lt;/h3&gt;
+
+&lt;p&gt;CNN will often learn multiple copies of the same filter at different orientations. Encoding rotational symmetry into the architecture of the network can reduce the redundancy of learning patterns at different orientations, and can reduce the number of parameters, diminishing the risk of over-fitting.&lt;/p&gt;
+
+&lt;p&gt;There are only four possible rotations of the input that would not require interpolation over angles $ k \cdot 90^\text{o}, k \in [0, 1, 2, 3]$. This restricted form of restricted symmetry is what is called &lt;strong&gt;cyclic symmetry&lt;/strong&gt; by the authors of the paper. Applying a horizontal flip, we can get eight possible orientations: &lt;strong&gt;dihedral symmetry&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Cyclic symmetry&lt;/em&gt; can be encoded in CNNs by parameter sharing.&lt;/p&gt;
 
 &lt;h3 id=&quot;equivariance-and-invariance&quot;&gt;Equivariance and Invariance&lt;/h3&gt;
 
