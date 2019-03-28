@@ -4,7 +4,7 @@
  <title>Javier Peralta</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2019-03-27T18:11:34-06:00</updated>
+ <updated>2019-03-27T19:16:20-06:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Javier Peralta</name>
@@ -13,11 +13,43 @@
 
  
  <entry>
-   <title>Exploiting Cyclyc Symmetry in Convolutional Neural Networks</title>
+   <title>Exploiting Cyclic Symmetry in Convolutional Neural Networks</title>
    <link href="http://localhost:4000/2019/03/27/cyclic-symmetry/"/>
    <updated>2019-03-27T00:00:00-06:00</updated>
    <id>http://localhost:4000/2019/03/27/cyclic-symmetry</id>
    <content type="html">&lt;p&gt;&lt;a href=&quot;https://arxiv.org/abs/1602.02660&quot;&gt;Source&lt;/a&gt;&lt;/p&gt;
+
+&lt;table class=&quot;authors&quot;&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Sander Dielman&lt;/td&gt;
+    &lt;td class=&quot;email&quot;&gt;&lt;a href=&quot;mailto:SEDIELEM@GOOGLE.COM&quot;&gt;SEDIELEM@GOOGLE.COM&lt;/a&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Jeffrey De Fauw&lt;/td&gt;
+    &lt;td class=&quot;email&quot;&gt;&lt;a href=&quot;mailto:DEFAUW@GOOGLE.COM&quot;&gt;DEFAUW@GOOGLE.COM&lt;/a&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Koray Kavukcuoglu&lt;/td&gt;
+    &lt;td class=&quot;email&quot;&gt;&lt;a href=&quot;mailto:KORAYK@GOOGLE.COM&quot;&gt;KORAYK@GOOGLE.COM&lt;/a&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;!-- In this paper the use of four new operations that are aimed to introduce rotational equivariance in **convolutional neural networks** (*CNNs*) is discussed. --&gt;
+
+&lt;p&gt;The authors of this paper propose four new neural networks, that can be used together to build &lt;strong&gt;CNNs&lt;/strong&gt; (Convolutional Neural Networks) that are partially or fully rotation equivariant.&lt;/p&gt;
+
+&lt;h3 id=&quot;equivariance-and-invariance&quot;&gt;Equivariance and Invariance&lt;/h3&gt;
+
+&lt;p&gt;A function $f(x)$ is called equivariant to a class of transformations T, if&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;f(tx) = t^\prime f(x) \,\,\,\, \forall t \in T&lt;/script&gt;
+
+&lt;p&gt;where $t^\prime$ is some transformation of the output. That is, transforming an input $x$ and then passing it to $f$ gives the same result as passing $x$ to $f$ and then transforming the output. Furthermore, a function $f$ is invariant to this class of transformations if&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;f(tx) = f(x) \,\,\,\, \forall t \in T&lt;/script&gt;
+
 </content>
  </entry>
  

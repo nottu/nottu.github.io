@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="/public/css/poole.css">
   <link rel="stylesheet" href="/public/css/syntax.css">
   <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="/public/scss/style.css">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
 
   <!-- Icons -->
@@ -27,6 +28,19 @@
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+  <!-- Latex Suppert -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        inlineMath: [['$','$']]
+      }
+    });
+  </script>
+
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 </head>
 
 
@@ -70,6 +84,8 @@
           
         
       
+        
+      
       <a class="sidebar-nav-item" href="/papers/">Read Papers</a>
 
       <a class="sidebar-nav-item" href="https://github.com/nottu/nottu.github.io">GitHub project</a>
@@ -95,7 +111,7 @@
       <li>
         <h3>
           <a href="/2019/03/27/cyclic-symmetry/">
-            Exploiting Cyclyc Symmetry in Convolutional Neural Networks
+            Exploiting Cyclic Symmetry in Convolutional Neural Networks
             <small>27 Mar 2019</small>
           </a>
         </h3>

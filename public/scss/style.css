@@ -1,0 +1,7 @@
+table.authors {
+  border: none; }
+  table.authors tbody tr td {
+    border: none;
+    background-color: inherit; }
+  table.authors tbody tr td.email {
+    text-align: right; }

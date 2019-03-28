@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="/public/css/poole.css">
   <link rel="stylesheet" href="/public/css/syntax.css">
   <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="/public/scss/style.css">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
 
   <!-- Icons -->
@@ -27,6 +28,19 @@
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+  <!-- Latex Suppert -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        inlineMath: [['$','$']]
+      }
+    });
+  </script>
+
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 </head>
 
 
@@ -70,6 +84,8 @@
           
         
       
+        
+      
       <a class="sidebar-nav-item active" href="/papers/">Read Papers</a>
 
       <a class="sidebar-nav-item" href="https://github.com/nottu/nottu.github.io">GitHub project</a>
@@ -81,7 +97,7 @@
 
     <div class="content container">
       <p class="message">
-  In this page I post summaries of papers that I read, mostly related to my thesis.
+  In this page I post summaries of papers that I read, mostly related to my thesis. All images and work belong to the listed authors.
 </p>
 
 
@@ -90,13 +106,45 @@
   <div class="post">
     <h1 class="post-title">
       <a href="/2019/03/27/cyclic-symmetry/">
-        Exploiting Cyclyc Symmetry in Convolutional Neural Networks
+        Exploiting Cyclic Symmetry in Convolutional Neural Networks
       </a>
     </h1>
 
     <span class="post-date">27 Mar 2019</span>
 
     <p><a href="https://arxiv.org/abs/1602.02660">Source</a></p>
+
+<table class="authors">
+  <tr>
+    <td>Sander Dielman</td>
+    <td class="email"><a href="mailto:SEDIELEM@GOOGLE.COM">SEDIELEM@GOOGLE.COM</a></td>
+  </tr>
+  <tr>
+    <td>Jeffrey De Fauw</td>
+    <td class="email"><a href="mailto:DEFAUW@GOOGLE.COM">DEFAUW@GOOGLE.COM</a></td>
+  </tr>
+  <tr>
+    <td>Koray Kavukcuoglu</td>
+    <td class="email"><a href="mailto:KORAYK@GOOGLE.COM">KORAYK@GOOGLE.COM</a></td>
+  </tr>
+</table>
+
+<p><br /></p>
+
+<!-- In this paper the use of four new operations that are aimed to introduce rotational equivariance in **convolutional neural networks** (*CNNs*) is discussed. -->
+
+<p>The authors of this paper propose four new neural networks, that can be used together to build <strong>CNNs</strong> (Convolutional Neural Networks) that are partially or fully rotation equivariant.</p>
+
+<h3 id="equivariance-and-invariance">Equivariance and Invariance</h3>
+
+<p>A function $f(x)$ is called equivariant to a class of transformations T, if</p>
+
+<script type="math/tex; mode=display">f(tx) = t^\prime f(x) \,\,\,\, \forall t \in T</script>
+
+<p>where $t^\prime$ is some transformation of the output. That is, transforming an input $x$ and then passing it to $f$ gives the same result as passing $x$ to $f$ and then transforming the output. Furthermore, a function $f$ is invariant to this class of transformations if</p>
+
+<script type="math/tex; mode=display">f(tx) = f(x) \,\,\,\, \forall t \in T</script>
+
 
   </div>
   
