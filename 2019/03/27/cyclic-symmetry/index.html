@@ -30,7 +30,8 @@
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
 
   <!-- Latex Suppert -->
-  <script type="text/x-mathjax-config">
+  
+       <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       TeX: {
         equationNumbers: {
@@ -38,16 +39,16 @@
         }
       },
       tex2jax: {
-        inlineMath: [ ['$','$'] ],
+        inlineMath: [ ['$','$'], ['\\(','\\)']],
         displayMath: [ ['$$','$$'] ],
         processEscapes: true,
       }
     });
   </script>
-  <script type="text/javascript"
-          src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-  </script>
-  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script                                            src='/unpacked/MathJax.js?config=TeX-MML-AM_CHTML' async></script> -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+  
 
 </head>
 
